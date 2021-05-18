@@ -26,7 +26,7 @@ function Post(
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Gad Dayan <span>
+              Gad Dayan{" "} <span className="post__headerSpecial">
                 <VerifiedUserIcon className="post__badge"/>
               </span>
             </h3>
@@ -37,12 +37,10 @@ function Post(
         </div>
         <img src="https://images.unsplash.com/photo-1585943763944-7c5795083862?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt=""/>
         <div className="post__footer">
-            <ChatBubbleOutlineIcon fontSize="small"/>
-            <RepeatIcon fontSize="small"/>
-            <FavoriteBorderIcon fontSize="small"/>
-            <PublishIcon fontSize="small"/>
-
-
+          <RepeatIcon />
+          <ChatBubbleOutlineIcon />
+          <FavoriteBorderIcon />
+          <PublishIcon />
         </div>
       </div>
     </div>
