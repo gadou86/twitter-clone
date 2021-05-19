@@ -2,6 +2,8 @@ import React from 'react'
 import './Feed.css'
 import TweetBox from './TweetBox'
 import Post from './Post'
+import { Timeline } from 'react-twitter-widgets'
+
 
 function Feed() {
   return (
@@ -15,6 +17,12 @@ function Feed() {
       {/* TweetBox */}
     <TweetBox />
       <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+
     </div>
   )
 }
