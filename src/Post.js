@@ -6,8 +6,10 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
+import Feed from './Feed'
 
-function Post(
+function Post({
+
   displayName,
   username,
   verified,
@@ -15,27 +17,29 @@ function Post(
   text,
   image,
   avatar
-) {
+})
 
+{
   return(
     <div className="post">
       <div className="post__avatar">
-        <Avatar src=""/>
+        <Avatar src={avatar}/>
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Gad Dayan{" "} <span className="post__headerSpecial">
-                <VerifiedUserIcon className="post__badge"/>
+              {displayName}{" "} <span className="post__headerSpecial">
+              
+                <VerifiedUserIcon className="post__badge"/> @{username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>I challenge you to built a twitter clone with react</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src="https://images.unsplash.com/photo-1585943763944-7c5795083862?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt=""/>
+        <img src={image} alt=""/>
         <div className="post__footer">
           <RepeatIcon />
           <ChatBubbleOutlineIcon />
